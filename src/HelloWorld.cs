@@ -21,7 +21,7 @@ namespace FuncDemo
             return new OkObjectResult("Welcome to Azure Functions!");
         }
 
-                [Function("Health")]
+        [Function("Health")]
         public IActionResult Health([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req)
         {
             _logger.LogInformation("Health check endpoint called at: {time}", DateTime.UtcNow);
